@@ -1,0 +1,27 @@
+# Example variables — do not commit secrets
+# Copy to terraform.tfvars and edit
+
+aws_region = "us-west-2"
+environment  = "dev"
+app_name     = "myapp"
+owner        = "devops@company.com"
+
+vpc_cidr = "10.0.0.0/16"
+
+instance_type = "t3.medium"
+instance_count = 2
+
+db_instance_class = "db.t3.medium"
+db_name          = "appdb"
+db_username      = "admin"
+# db_password      = "your-secure-password-here"  # ⚠️ required in tfvars
+db_port          = 3306
+db_allocated_storage = 20
+multi_az         = false
+
+alb_enabled = true
+
+# Common tags
+common_tags = {
+  Department = "Engineering"
+}
